@@ -1,0 +1,6 @@
+plot(data$Sub_metering_1~data$dateTime, type = "l", ylab = "Energy sub metering", xlab = "", col = "black")
+lines(data$Sub_metering_2~data$dateTime, col = "red")
+lines(data$Sub_metering_3~data$dateTime, col = "blue")
+legend("topright", legend = c("Sub_metering_1", "Sub_metering_2", "Sub_metering_3"), col = c("black", "red", "blue"), lwd = c(1,1,1))
+dev.copy(png, "plot3.png", width=480, height=480)
+dev.off()
